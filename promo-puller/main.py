@@ -4,7 +4,7 @@ import json
 
 request_exceptions = (requests.exceptions.ProxyError,requests.exceptions.SSLError,requests.exceptions.Timeout)
 if not json.load(open("config.json"))["proxy"]=="":
-    proxies = json.load(open("config.json"))["proxy"]
+    proxies = {"https":json.load(open("config.json"))["proxy"]}
 else:
     proxies=None
 
