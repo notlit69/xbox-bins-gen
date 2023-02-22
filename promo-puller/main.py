@@ -34,7 +34,7 @@ def puller(ms_creds : str)-> None:
             return
     if getLink.status_code==500:
         print("[-] Microsoft internal server error!","c")
-        remove_content("emails.txt",ms_creds)
+        remove_content("accs.txt",ms_creds)
         return
     if getLink.status_code==429:
         print("[!] You are being rate limited!")
@@ -44,7 +44,7 @@ def puller(ms_creds : str)-> None:
         link = getLink.json()["resource"]
     except:
         print(f"[!] Failed to fetch code! Response text : {getLink.text} status code : {getLink.status_code}")
-        remove_content("emails.txt",ms_creds)
+        remove_content("accs.txt",ms_creds)
     print(link)
     open("promos.txt","a").write(link+"\n")
 
