@@ -47,6 +47,7 @@ def puller(ms_creds : str)-> None:
         remove_content("accs.txt",ms_creds)
     print(link)
     open("promos.txt","a").write(link+"\n")
+    remove_content("accs.txt",ms_creds)
 
 for l in open("accs.txt").read().splitlines():
     puller(l)
