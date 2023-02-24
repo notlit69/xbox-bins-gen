@@ -39,4 +39,4 @@ LTC : ltc1q5t94esuk9a5r73shalgpp7j4mmh7rmxk0xnnyq
 ETH : 0xE09707511621080AB06f55B43ebeb664F3723DB3
 SOL : 72rccAEFUpwtk22z3pgKz228c1xRpQJq6tAwEUTQmT2j
 
-Working as of 20/2/2023.
+Working as of 25/2/2023.
