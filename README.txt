@@ -1,6 +1,6 @@
 Notice:
 The promo puller is semi patched now. It will get you a lot of rate limits
-If you want a free promo puller maybe try https://discord.gg/promopuller
+If you want a free promo puller maybe try https://discord.gg/xboxpuller
 Or you can buy an version from me without rate limits! dm me on _notlit_#1823 for info (old dont dm about it)
 
 Requirements:
