@@ -50,12 +50,12 @@ def puller(creds)-> None:
     except:
         threading.Lock().acquire()
         print(f"[!] Failed to fetch code! Response text : {getLink.text} status code : {getLink.status_code}")
-        remove_content("emails.txt",creds)
+        remove_content("accs.txt",creds)
         threading.Lock().release()
         return
     threading.Lock().acquire()
     print(link)
-    remove_content("emails.txt",creds)
+    remove_content("accs.txt",creds)
     open("promos.txt","a").write(link+"\n")
     threading.Lock().release()
 accs = open("accs.txt").read().splitlines()
