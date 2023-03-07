@@ -7,7 +7,7 @@ const { Token: deviceToken } = deviceTokenResponse;
 
 const app = express()
 app.use(express.json())
-app.listen(1337, () => console.log("listening on 1337"));
+app.listen(1338, () => console.log("listening on 1338"));
 app.post("/", async function (req, res) {
     try {
         var x = await authenticate(req.body.user, req.body.pass, { deviceToken }); 
