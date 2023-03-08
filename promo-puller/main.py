@@ -34,30 +34,22 @@ def puller(creds)-> None:
             print(e,"r")
             return
     if getLink.status_code==500:
-        threading.Lock().acquire()
         print("[-] Microsoft internal server error!","c")
         # remove_content("emails.txt",ms_creds)
-        threading.Lock().release()
         return
     if getLink.status_code==429:
-        threading.Lock().acquire()
         print("[!] You are being rate limited!")
         print("[!] Sleeping for 5 minutes...")
-        threading.Lock().release()
         time.sleep(300)
     try:
         link = getLink.json()["resource"]
     except:
-        threading.Lock().acquire()
         print(f"[!] Failed to fetch code! Response text : {getLink.text} status code : {getLink.status_code}")
         remove_content("accs.txt",creds)
-        threading.Lock().release()
         return
-    threading.Lock().acquire()
     print(link)
     remove_content("accs.txt",creds)
     open("promos.txt","a").write(link+"\n")
-    threading.Lock().release()
 accs = open("accs.txt").read().splitlines()
 threads = int(input("[?] Enter amount of threads -> "))
 
