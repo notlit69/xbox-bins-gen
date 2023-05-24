@@ -1,3 +1,5 @@
+**This repo is only for educational purposes i am not responsible in any way of what you do with this**
+
 Notice:
 The promo puller is semi patched now. It will get you a lot of rate limits
 If you want a free promo puller maybe try https://discord.gg/xboxpuller
